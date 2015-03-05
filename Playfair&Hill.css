@@ -1,0 +1,474 @@
+/*全局reset*/
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Microsoft YaHei;
+}
+
+/*头部*/
+div#head{
+	background-image: url("image/head_background.gif");
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+}
+
+h1{
+	color: #ff9900;
+	font-weight: 400;
+	padding-top: 27px;
+	padding-bottom: 19px;
+	margin-left: 234px;
+}
+
+/*内容部分*/
+div#content{
+	background-image: url("image/content_background.png");
+	background-repeat: repeat-x;
+	height: 856px;
+	position: relative;
+}
+
+/*Playfair密码部分*/
+div#Playfair{
+	width: 1000px;
+	height: 414px;
+	margin: 0 auto;
+	padding-top: 36px;
+	overflow: hidden;
+	position: relative;
+}
+
+div#letters{
+	width: 501px;
+	height: 368px;
+	border-right: 2px solid #dfdfdf;
+	background-image: url("image/pc.jpg");
+	background-position: 56px 36px;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+}
+
+div#letters h2{
+	font-size: 15px;
+	font-weight: 400;
+	position: absolute;
+	top: 57px;
+	left: 81px;
+}
+
+div#Playfair table{
+	border-collapse: collapse;
+	position: absolute;
+	top: 63px;
+	left: 150px;
+}
+
+div#Playfair td{
+	border: 1px solid black;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 15px;
+}
+
+div#Playfair td.no_left{
+	border-left: 0;
+}
+
+div#Playfair td.no_right{
+	border-right: 0;
+}
+
+div#Playfair td.no_top{
+	border-top: 0;
+}
+
+div#Playfair td.no_bottom{
+	border-bottom: 0;
+}
+
+div.control{
+	float: left;
+	width: 497px;
+	position: relative;
+}
+
+div.control h2{
+	background-image: url("image/control.png");
+	background-repeat: no-repeat;
+	background-position: left 6px;
+	padding-left: 28px;
+	font-size: 21px;
+	font-weight: 400;
+	margin-left: 40px;
+	margin-bottom: 18px;
+}
+
+div#changeControl{
+	position: absolute;
+	top: 6px;
+	left: 355px;
+}
+
+div#changeControl a{
+	font-size: 13px;
+	letter-spacing: 3px;
+	text-decoration: none;
+	background-image: none;
+}
+
+div.inputRow{
+	margin-left: 54px;
+	overflow: hidden;
+}
+
+div.inputRow span.tips{
+	display: block;
+	color: #8a8987;
+	font-size: 12px;
+	clear: both;
+	line-height: 23px;
+	margin-left: 120px;
+}
+
+div.inputRow label{
+	float: left;
+	width: 95px;
+	text-align: right;
+	padding-right: 8px;
+	padding-top: 3px;
+}
+
+div.inputRow label span{
+	color: red;
+}
+
+div.inputRow input{
+	border: 1px solid #a0a0a0;
+	padding-left: 5px;
+	float: left;
+	width: 287px;
+	height: 29px;
+	-webkit-transition: border-color 0.3s ease-in-out;
+	-moz-transition: border-color 0.3s ease-in-out;
+	-ms-transition: border-color 0.3s ease-in-out;
+	-o-transition: border-color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+}
+
+div.inputRow input:hover,div.inputRow input:focus{
+	border-color: #30aff7;
+}
+
+div.inputRow img{
+	width: 25px;
+	float: left;
+	margin-left: 9px;
+	margin-top: 2px;
+	display: none;
+}
+
+input.btn{
+	width: 226px;
+	background-color: #ff9900;
+	color: white;
+	margin-left: 221px;
+	font-size: 18px;
+	letter-spacing: 40px;
+	line-height: 33px;
+	padding-left: 42px;
+	padding-bottom: 3px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-moz-transition: background-color 0.3s ease-in-out;
+	-ms-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
+}
+
+input.btn:hover{
+	background-color: #9b43ed;
+}
+
+div.view{
+	float: left;
+	width: 497px;
+	overflow: hidden;
+}
+
+div.view h2{
+	background-image: url("image/view.png");
+	background-repeat: no-repeat;
+	background-position: left 6px;
+	padding-left: 28px;
+	font-size: 21px;
+	font-weight: 400;
+	margin-left: 40px;
+	margin-bottom: 18px;
+}
+
+div.view label{
+	margin-left: 56px;
+	padding-right: 3px;
+	vertical-align: top;
+	float: left;
+	height: 90px;
+	width: 39px;
+	border-right: 5px solid #dfdfdf;
+}
+
+textarea{
+	border: 0;
+	resize: none;
+	background-color: white;
+	float: left;
+	margin-left: 20px;
+	width: 324px;
+	height: 87px;
+	font-size: 13px;
+}
+
+/*Hill密码部分*/
+div#Hill{
+	width: 1000px;
+	height: 406px;
+	margin: 0 auto;
+	padding-top: 36px;
+	overflow: hidden;
+	position: relative;
+}
+
+div#keys{
+	width: 501px;
+	height: 326px;
+	border-right: 2px solid #dfdfdf;
+	float: left;
+	position: relative;
+}
+
+div#keys h2{
+	font-size: 21px;
+	font-weight: 400;
+	position: absolute;
+	top: 250px;
+	left: 200px;
+}
+
+div#keys div{
+	position: absolute;
+	top: 290px;
+	left: 154px;
+	overflow: hidden;
+}
+
+div#keys div img{
+	width: 25px;
+	float: left;
+	display: none;
+}
+
+div#keys div span{
+	line-height: 25px;
+	float: left;
+	margin-left: 6px;
+}
+
+div#keys table{
+	border-collapse: collapse;
+	position: absolute;
+	top: 22px;
+	left: 131px;
+}
+
+div#keys td{
+	border: 1px solid black;
+	width: 73px;
+	height: 73px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 15px;
+}
+
+div#keys td input{
+	width: 73px;
+	height: 73px;
+	font-size: 30px;
+	text-align: center;
+}
+
+/*转换密码部分*/
+div.changeStyle{
+	position: absolute;
+	margin-left: -30px;
+	overflow: hidden;
+	left: 50%;
+}
+
+div#Playfair div.changeStyle{
+	top: 412px;
+}
+
+div#Hill div.changeStyle{
+	top: 380px;
+}
+
+div.changeStyle a{
+	background-repeat: no-repeat;
+	background-position: 2px 0;
+	width: 32px;
+	height: 6px;
+	float: left;
+}
+
+a.unusing{
+	background-image: url("image/unusing.png");
+	color: #9b43ed;
+	cursor: pointer;
+}
+
+a.using{
+	background-image: url("image/using.png");
+	color: black;
+	cursor: auto;
+}
+
+/*信息部分*/
+div#information{
+	background-image: url("image/information_background.jpg");
+	height: 107px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+div#information h2{
+	margin: 0 auto;
+	width: 77px;
+	color: white;
+	font-size: 17px;
+	font-weight: 400;
+	padding-top: 7px;
+}
+
+div#information_content{
+	width: 760px;
+	margin: 0 auto;
+}
+
+div#information_content div{
+	width: 145px;
+	height: 40px;
+	float: left;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: 32px 2px;
+	color: white;
+	padding-top: 34px;
+	padding-left: 6px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+div#name{
+	background-image: url("image/name.png");
+}
+
+div#grade{
+	background-image: url("image/grade.png");
+}
+
+div#class{
+	background-image: url("image/class.png");
+}
+
+div#major{
+	background-image: url("image/major.png");
+}
+
+div#course{
+	background-image: url("image/course.png");
+}
+
+/*页脚部分*/
+div#foot{
+	text-align: center;
+	line-height: 35px;
+	font-size: 14px;
+}
+
+/*提示语部分*/
+.PlayfairSuccessTips{
+	background-color: #11cd6e;
+	position: absolute;
+	top: 245px;
+	left: 50%;
+	color: white;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 55px;
+	width: 293px;
+	margin-left: -146.5px;
+	padding-bottom: 3px;
+	text-align: center;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.PlayfairErrorTips{
+	background-color: #EC5E49;
+	position: absolute;
+	top: 245px;
+	left: 50%;
+	color: white;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 55px;
+	width: 293px;
+	margin-left: -146.5px;
+	padding-bottom: 3px;
+	text-align: center;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.HillfairSuccessTips{
+	background-color: #11cd6e;
+	position: absolute;
+	top: 680px;
+	left: 50%;
+	color: white;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 55px;
+	width: 293px;
+	margin-left: -146.5px;
+	padding-bottom: 3px;
+	text-align: center;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.HillfairErrorTips{
+	background-color: #EC5E49;
+	position: absolute;
+	top: 680px;
+	left: 50%;
+	color: white;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 55px;
+	width: 293px;
+	margin-left: -146.5px;
+	padding-bottom: 3px;
+	text-align: center;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}

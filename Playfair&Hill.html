@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Playfair密码&Hill密码模拟演示</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="Playfair&Hill.css">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="Playfair&Hill_incompatible.css">
+	<![endif]-->
+</head>
+<body>
+	<div id="head">
+		<h1>Playfair密码&Hill密码模拟演示</h1>
+	</div>
+
+	<div id="content">
+		<div id="Playfair">
+			<div id="letters">
+				<h2>字母矩阵</h2>
+				<table>
+					<tr>
+						<td class="no_left no_top"></td>
+						<td class="no_top"></td>
+						<td class="no_top"></td>
+						<td class="no_top"></td>
+						<td class="no_top no_right"></td>
+					</tr>
+					<tr>
+						<td class="no_left"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="no_right"></td>
+					</tr>
+					<tr>
+						<td class="no_left"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="no_right"></td>
+					</tr>
+					<tr>
+						<td class="no_left"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="no_right"></td>
+					</tr>
+					<tr>
+						<td class="no_left no_bottom"></td>
+						<td class="no_bottom"></td>
+						<td class="no_bottom"></td>
+						<td class="no_bottom"></td>
+						<td class="no_right no_bottom"></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="control">
+				<h2>操作板块</h2>
+				<div id="changeControl">
+					<a id="encrypt" class="using" href="#">加密</a>
+					|
+					<a id="decrypt" class="unusing" href="#">解密</a>
+				</div>
+				<div class="inputRow">
+					<label for="PlayfairKey">
+						<span>*</span>
+						密钥关键字
+					</label>
+					<input id="PlayfairKey" type="text" placeholder="请输入密钥关键字" />
+					<img src="image/correct.png" alt="正确">
+					<img src="image/error.png" alt="错误">
+					<span class="tips">非空，字母+空格，合法，长度适中(15字符以内)</span>
+				</div>
+				<div class="inputRow">
+					<label for="PlayfairText">
+						<span>*</span>
+						明文
+					</label>
+					<input id="PlayfairText" type="text" placeholder="请输入明文" />
+					<img src="image/correct.png" alt="正确">
+					<img src="image/error.png" alt="错误">
+					<span class="tips">非空，字母+空格，合法，长度适中(50字符以内)</span>
+				</div>
+				<div class="inputRow">
+					<label for="PlayfairPsd">
+						<span>*</span>
+						密文
+					</label>
+					<input id="PlayfairPsd" type="text" placeholder="请输入密文" />
+					<img src="image/correct.png" alt="正确">
+					<img src="image/error.png" alt="错误">
+					<span class="tips">非空，字母+空格，合法，长度适中(50字符以内)</span>
+				</div>
+				<input id="PlayfairBtn" class="btn" type="button" value="加密">
+			</div>
+
+			<div class="view">
+				<h2>查看板块</h2>
+				<label for="PlayfairResult">密文</label>
+				<textarea id="PlayfairResult" disabled="disabled"></textarea>
+			</div>
+
+			<div class="changeStyle">
+				<a class="using" href="#Playfair"></a>
+				<a class="unusing" href="#Hill"></a>
+			</div>
+		</div>
+
+		<div id="Hill">
+			<div id="keys">
+				<h2>密钥矩阵</h2>
+				<table>
+					<tr>
+						<td><input type="text" maxlength="3"></td>
+						<td><input type="text" maxlength="3"></td>
+						<td><input type="text" maxlength="3"></td>
+					</tr>
+					<tr>
+						<td><input type="text" maxlength="3"></td>
+						<td><input type="text" maxlength="3"></td>
+						<td><input type="text" maxlength="3"></td>
+					</tr>
+					<tr>
+						<td><input type="text" maxlength="3"></td>
+						<td><input type="text" maxlength="3"></td>
+						<td><input type="text" maxlength="3"></td>
+					</tr>
+				</table>
+				<div>
+					<img src="image/error.png" alt="错误">
+					<span class="tips"></span>
+				</div>
+			</div>
+
+			<div class="control">
+				<h2>操作板块</h2>
+				<div class="inputRow">
+					<label for="HillText">
+						<span>*</span>
+						明文
+					</label>
+					<input id="HillText" type="text" placeholder="请输入明文" />
+					<img src="image/correct.png" alt="正确">
+					<img src="image/error.png" alt="错误">
+					<span class="tips">非空，字母+空格，合法，长度适中(50字符以内)</span>
+				</div>
+				<input id="HillBtn" class="btn" type="button" value="加密">
+			</div>
+
+			<div class="view">
+				<h2>查看板块</h2>
+				<label for="HillResult">密文</label>
+				<textarea id="HillResult" disabled="disabled"></textarea>
+			</div>
+
+			<div class="changeStyle">
+				<a class="unusing" href="#Playfair"></a>
+				<a class="using" href="#Hill"></a>
+			</div>
+		</div>
+	</div>
+
+	<div id="information">
+		<h2>MADE BY</h2>
+		<div id="information_content">
+			<div id="name">
+				<p>NAME</p>
+				<p>钱杰明</p>
+			</div>
+			<div id="grade">
+				<p>GRADE</p>
+				<p>2012级</p>
+			</div>
+			<div id="class">
+				<p>CLASS</p>
+				<p>4班</p>
+			</div>
+			<div id="major">
+				<p>MAJOR</p>
+				<p>软件工程</p>
+			</div>
+			<div id="course">
+				<p>COURSE</p>
+				<p>信息安全概论</p>
+			</div>
+		</div>
+	</div>
+
+	<!--[if lt IE 9]>
+		<p class="incompatible">肯定没有看我写的说明文件，都说了不支持IE8以及以下版本咯！赶紧换个新的浏览器啦！</p>
+		<p class="incompatible">推荐Firefox和chrome哦~记得好评哦亲！</p>
+		<img src="image/incompatible.jpg" alt="不兼容" class="incompatible" />
+	<![endif]-->
+
+	<div id="foot">©2014 Jamin Qian 作品</div>
+	
+	<script type="text/javascript" src="Playfair&Hill.js"></script>
+</body>
+</html>
